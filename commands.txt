@@ -1,1 +1,59 @@
+--->  install docker by using commands below:
+#  curl -fsSL https://get.docker.com -o install-docker.sh
+#  sh install-docker.sh
+
+--->  install node js v16 by using command below: 
+#  curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -&&sudo apt-get install -y nodejs
+
+--->  install openjdk 11 by using below command:
+# sudo apt update
+# sudo apt install default-jre 
+
+--->  install jenkins by using commands below: 
+#  curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee \
+  /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update
+sudo apt-get install jenkins
+
+--->  create sonarqube container by using command below:
+# sudo docker container run -dt --name sonarqube -p 9000:9000 sonarqube 
+
+--->  create sonar scanner cli container by using command below:
+# sudo docker container run --rm -e SONAR_HOST_URL="http://18.60.55.62:9000" -e SONAR_LOGIN="sqp_fd2aa4a6f5aff37cde27e35307f2b418ec954fa9" --volume ".:/usr/src" sonarsource/sonar-scanner-cli -Dsonar.projectKey=lms-sonar
+
+--->  create nexus repository container by using command below:
+# sudo docker run -d -p 8081:8081 --name nexus sonatype/nexus3
+
+--->  to see the nexus repository password by using command below:
+# sudo docker container exec nexus cat /nexus-data/admin.password
+
+--->  upload artifact into nexus repository by using command below:
+# curl -v -u admin:gopal --upload-file dist-2.1.zip http://18.61.5.163:8081/repository/lms-artifact/
+
+--->  download artifact into nexus repository by using command below:
+# curl -u admin:gopal -X GET 'http://18.61.5.163:8081/repository/lms-artifact/dist-2.1.zip' --output dist-2.1.zip
+
+--->  create a nginx web deplyoment container for the artifact by using command below:
+# sudo docker container run -dt --name red -p 8083:80 --volume /home/ubuntu/red/dist:/usr/share/nginx/html nginx
+
+--->  create a zip file  by using command below:
+# zip dist-2.1.zip -r dist/  (here dist is the directory name and dist-2.1.zip is the file name)
+
+--->  unzip file  by using command below:
+# unzip dist-2.1.zip dist/
+
+
+
+
+
+
+
+
+
+
+
+
 
