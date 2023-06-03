@@ -18,11 +18,14 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
 sudo apt-get update
 sudo apt-get install jenkins
 
+---> to know jenkins administration password by using commans below:
+# sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
 --->  create sonarqube container by using command below:
 # sudo docker container run -dt --name sonarqube -p 9000:9000 sonarqube 
 
 --->  create sonar scanner cli container by using command below:
-# sudo docker container run --rm -e SONAR_HOST_URL="http://18.60.55.62:9000" -e SONAR_LOGIN="sqp_fd2aa4a6f5aff37cde27e35307f2b418ec954fa9" --volume ".:/usr/src" sonarsource/sonar-scanner-cli -Dsonar.projectKey=lms-sonar
+# sudo docker container run --rm -e SONAR_HOST_URL="http://18.61.42.237:9000" -e SONAR_LOGIN="sqp_e15bbf48d899c941399a16e68e2f21d69efaa90c" --volume ".:/usr/src" sonarsource/sonar-scanner-cli -Dsonar.projectKey=lms-sonar
 
 --->  create nexus repository container by using command below:
 # sudo docker run -d -p 8081:8081 --name nexus sonatype/nexus3
@@ -44,6 +47,9 @@ sudo apt-get install jenkins
 
 --->  unzip file  by using command below:
 # unzip dist-2.1.zip dist/
+
+---> to change admin user permissions in linux by using command below:
+# sudo vi sudo 
 
 
 
