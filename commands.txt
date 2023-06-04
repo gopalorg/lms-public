@@ -50,7 +50,7 @@ sudo apt-get install jenkins
 
 ---> to change admin user permissions in linux by using command below:
 # sudo vi sudo 
-
+Jenkins ALL=(ALL) NOPASSWD:ALL
 
 
 
