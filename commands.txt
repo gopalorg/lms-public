@@ -25,7 +25,7 @@ sudo apt-get install jenkins
 # sudo docker container run -dt --name sonarqube -p 9000:9000 sonarqube 
 
 --->  create sonar scanner cli container by using command below:
-# sudo docker container run --rm -e SONAR_HOST_URL="http://18.61.42.237:9000" -e SONAR_LOGIN="sqp_e15bbf48d899c941399a16e68e2f21d69efaa90c" --volume ".:/usr/src" sonarsource/sonar-scanner-cli -Dsonar.projectKey=lms-sonar
+# sudo docker container run --rm -e SONAR_HOST_URL="http://18.60.85.16:9000" -e SONAR_LOGIN="sqp_b1fdbb9a58d017d737d3b9dae4ebc45b0d4c73a2" --volume ".:/usr/src" sonarsource/sonar-scanner-cli -Dsonar.projectKey=lms2
 
 --->  create nexus repository container by using command below:
 # sudo docker run -d -p 8081:8081 --name nexus sonatype/nexus3
