@@ -1,1 +1,4 @@
 https://blog.stackademic.com/deploy-mern-stack-application-using-docker-docker-compose-d3eec3d9d1eb
+
+
+https://mrcloudbook.hashnode.dev/devsecops-project-complete-ci-cd-3-tier-app-petshop#heading-2c-install-trivy
