@@ -2,3 +2,8 @@ https://blog.stackademic.com/deploy-mern-stack-application-using-docker-docker-c
 
 
 https://mrcloudbook.hashnode.dev/devsecops-project-complete-ci-cd-3-tier-app-petshop#heading-2c-install-trivy
+
+
+
+sudo nano /etc/systemd/system/multi-user.target.wants/jenkins.service
+
