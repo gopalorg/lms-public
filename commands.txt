@@ -3,7 +3,7 @@
 #  sh install-docker.sh
 
 --->  install node js v16 by using command below: 
-#  curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -&&sudo apt-get install -y nodejs
+#  curl -fsSL https://deb.nodesource.com/setup_21.x | sudo -E bash -&&sudo apt-get install -y nodejs
 
 --->  install openjdk 11 by using below command:
 # sudo apt update
