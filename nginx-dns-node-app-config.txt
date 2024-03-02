@@ -1,0 +1,50 @@
+sudo npm i pm2 -g
+
+pm2 start main.js
+
+pm2 startup
+
+#####   after that copy & paste the command which is showing #######
+
+sudo ufw status (enable if it is inactive)
+
+sudo ufw enable
+
+sudo ufw allow ssh
+
+sudo ufw allow http
+
+sudo ufw allow https
+
+sudo apt install nginx
+
+sudo nano /etc/nginx/sites-available/default
+
+#### paste below script in location & also add domain name ######
+
+proxy_pass http://localhost:3000; #whatever port your app runs on
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+
+
+sudo nginx -t   (make sure the test is successful)
+
+sudo service nginx restart (after that check your page)
+
+####### configure your IP with DNS #######
+
+sudo add-apt-repository ppa:certbot/certbot
+
+sudo apt-get update
+
+sudo apt-get install python3-certbot-nginx
+
+sudo certbot --nginx -d yourdomain.com -d www.yourdomain.com
+
+certbot renew --dry-run
+
+
+
