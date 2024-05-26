@@ -1,0 +1,12 @@
+https://blog.stackademic.com/deploy-mern-stack-application-using-docker-docker-compose-d3eec3d9d1eb
+
+
+https://mrcloudbook.hashnode.dev/devsecops-project-complete-ci-cd-3-tier-app-petshop#heading-2c-install-trivy
+
+
+
+sudo nano /etc/systemd/system/multi-user.target.wants/jenkins.service
+
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDJ3fXcIABosaYBrKBYntvbKqmydL+6SLAerG0+P8EU5SfFScc79HHi8/1W882WiBzgBW2RQn8ev3pf7RhaT1wLzZQCt7lgGpxmDsBwEmSEbk2T8BSzA+Lr+GhYHIgC66qRQh72aoxUAoNn4z/W4TZTQilMwbpXPYJNouTy2Ncs+D8+1/jdlMGbAPlk2AX67iSzijU9zd9+j3PzifqlSaetCXrNZOcK95g00xpke1ig+dpMXqingzT8Rj3r/7fRQDipWs7ADOmwS3VwB1Vuv0NDLI8jTq9laRvJr9bJuyu90yIVGs5EpqkdauRslcmPCzbUME4yJwpGt7kyaeDlMB5Rh8tSL+EtWZoGtFZsWUcrRM2TXvEJqMo9gI8pxYCIasHNvJLoctYfGenNRnE69SbqwRT1UHvo/DHci8JGHwI/hWuuFNEYNRSj73ZEch5A1KnlowFSqjRfVBYFo3PEwxI28hB0bx0jiHAsfWUBi6wDzFhhhIj8QM8EGwEmKf5DpyE= gopal@gopal-VirtualBox
+
