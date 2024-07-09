@@ -1,6 +1,10 @@
 --->  install docker by using commands below:
 #  curl -fsSL https://get.docker.com -o install-docker.sh
 #  sh install-docker.sh
+#  sudo groupadd docker
+#  sudo usermod -aG docker $USER
+#  newgrp docker
+#  
 
 --->  install node js v16 by using command below: 
 #  curl -fsSL https://deb.nodesource.com/setup_21.x | sudo -E bash -&&sudo apt-get install -y nodejs
